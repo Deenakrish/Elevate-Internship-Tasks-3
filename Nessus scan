@@ -61,4 +61,4 @@ After the scan results were generated, the vulnerabilities were identified and c
 The remediation steps provided by Nessus for each vulnerability were reviewed.
 All important findings were documented clearly.
 The complete process and all vulnerabilities found were captured as screenshots or screen recordings.
-These screenshots and recordings were uploaded to a separate folder in the Git repository for reference.
+These screenshots were uploaded to a separate files in this Git repository for reference and also analyzed the vulnerability report based on the severity and provided mitigation
