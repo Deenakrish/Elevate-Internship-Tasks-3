@@ -1,0 +1,64 @@
+                                                                                 TASK-3-VULNERABILITY SCAN USING NESSUS ESSENTIALS
+                                                                        
+Introduction:
+For this task, I performed a vulnerability assessment using Nessus Essentials.
+The installation, configuration, and scanning procedures were executed on a Linux (Kali Linux) machine, which served as both the scanner host and the scan target.
+                                                                                    STEP-1: NESSUS INSTALLATION GUIDE (LINUX)
+                                                                                    1. Install Nessus Essentials – Kali Linux
+
+Step 1: Download Nessus
+Visited Tenable’s official download page:
+https://www.tenable.com/products/nessus/
+Download Nessus:
+Selected linux → Downloaded the .exe installer.
+Registered with email on the Nessus website → Received an Activation Code.
+
+Step 2: Install Nessus
+I opened the terminal and navigated to the Downloads directory:
+cd Downloads
+ls
+After confirming the Nessus package was downloaded, it was installed using:
+sudo dpkg -i <nessus-package-name>.deb
+
+Step 3: Start Nessus Service
+sudo systemctl start nessusd.service
+Enabled at boot:
+sudo systemctl enable nessusd.service
+
+Step 4: Access Web Interface
+Opened the browser and went to:
+https://localhost:8834
+Selected Nessus Essentials → Entered Activation Code → Created user account.
+Waited 20–45 minutes for the plugin download.
+
+                                                                                     STEP 2: Find Your Local Machine IP (Linux)
+
+Ran in terminal:
+ip addr show
+The output showed something like:
+inet 192.168.1.22
+This was the IP of the system that was used in the scan.
+
+                                                                                         STEP 3: Create a New Scan in Nessus
+
+Step 1: Went to the Nessus Scans Dashboard
+Clicked New Scan
+Chose Basic Network Scan
+
+Step 2: Configure Scan
+Filled the required fields:
+
+Name:Local Machine Vulnerability Scan
+Targets:192.168.x.x (Linux machine IP) OR localhost
+
+Step 3: Save & Launch
+Clicked Save
+Clicked Launch Scan
+
+Conlusion:
+The scan was started and took 30 to 60 minutes to complete.
+After the scan results were generated, the vulnerabilities were identified and categorized based on severity.
+The remediation steps provided by Nessus for each vulnerability were reviewed.
+All important findings were documented clearly.
+The complete process and all vulnerabilities found were captured as screenshots or screen recordings.
+These screenshots and recordings were uploaded to a separate folder in the Git repository for reference.
