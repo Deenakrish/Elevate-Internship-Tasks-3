@@ -1,10 +1,9 @@
-                                                                                 TASK-3-VULNERABILITY SCAN USING NESSUS ESSENTIALS
+                                                                               TASK-3-VULNERABILITY SCAN USING NESSUS ESSENTIALS
                                                                         
 Introduction:
 For this task, I performed a vulnerability assessment using Nessus Essentials.
 The installation, configuration, and scanning procedures were executed on a Linux (Kali Linux) machine, which served as both the scanner host and the scan target.
                                                                                     STEP-1: NESSUS INSTALLATION GUIDE (LINUX)
-                                                                                    1. Install Nessus Essentials – Kali Linux
 
 Step 1: Download Nessus
 Visited Tenable’s official download page:
@@ -36,7 +35,7 @@ Waited 20–45 minutes for the plugin download.
 Ran in terminal:
 ip addr show
 The output showed something like:
-inet 192.168.1.22
+inet 10.131.xx.xx
 This was the IP of the system that was used in the scan.
 
                                                                                          STEP 3: Create a New Scan in Nessus
@@ -48,8 +47,8 @@ Chose Basic Network Scan
 Step 2: Configure Scan
 Filled the required fields:
 
-Name:Local Machine Vulnerability Scan
-Targets:192.168.x.x (Linux machine IP) OR localhost
+Name:Vulnerability Scan
+Targets:10.131.xx.xx(Linux machine IP) OR localhost
 
 Step 3: Save & Launch
 Clicked Save
@@ -60,5 +59,5 @@ The scan was started and took 30 to 60 minutes to complete.
 After the scan results were generated, the vulnerabilities were identified and categorized based on severity.
 The remediation steps provided by Nessus for each vulnerability were reviewed.
 All important findings were documented clearly.
-The complete process and all vulnerabilities found were captured as screenshots or screen recordings.
+The complete process and all vulnerabilities found were captured as screenshots
 These screenshots were uploaded to a separate files in this Git repository for reference and also analyzed the vulnerability report based on the severity and provided mitigation
